@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+
+:root{
+    --color-principal: #0872BF;
+    --color-complementario: #FFFFFF;
+    --color-secundario:linear-gradient(90deg, rgba(8,114,191,1) 50%, rgba(13,146,175,1) 100%);
+}
+body{
+background-color:#141A1A;
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 3vh 4vw;
+}
+
+.logo{
+    display: flex;
+    gap: 1vh;
+    }
+.logo img{
+    width: 30%;
+    }
+    
+.textoLogo{
+    color: var(--color-complementario);
+    padding-top: 9px;
+    font-weight:400;
+    font-size: 27px;
+}
+
+nav .menu{
+    display: flex;
+    justify-content: end;
+}
+
+nav .btnDropdonw{
+    background-color: transparent;
+    color: #FFFFFF;
+    border: none;
+    font-size: 2rem;
+}
+
+.menuControls{
+    display: none;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media screen and (min-width: 1000px){
+    .menuControls{
+        display: flex;
+        gap: 50px;
+        font-size: 27px;
+    }
+    .menuControls a{
+        text-decoration: none;
+        }
+    a:visited{
+        color: var(--color-complementario);
+    }
+    a:hover{
+        color: var(--color-principal)
+    }
+    .btnDropdonw{
+        display: none;
+    }
+}
