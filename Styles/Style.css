@@ -10,10 +10,14 @@
 :root{
     --color-principal: #0872BF;
     --color-complementario: #FFFFFF;
-    --color-secundario:linear-gradient(90deg, rgba(8,114,191,1) 50%, rgba(13,146,175,1) 100%);
+    --color-secundario: linear-gradient(100deg, #0872BF 30%, #0D92AF 100%);
 }
+
+/* Menú de la página*/
+
 body{
 background-color:#141A1A;
+width: 100%;
 }
 
 
@@ -27,15 +31,11 @@ header{
     display: flex;
     gap: 1vh;
     }
-.logo img{
-    width: 30%;
-    }
-    
+
 .textoLogo{
-    color: var(--color-complementario);
-    padding-top: 9px;
+    padding-top: 8px;
     font-weight:400;
-    font-size: 27px;
+    font-size: 1.1rem;
 }
 
 nav .menu{
@@ -47,24 +47,89 @@ nav .btnDropdonw{
     background-color: transparent;
     color: #FFFFFF;
     border: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .menuControls{
     display: none;
 }
 
+/* Hero de la página */
+
 .hero{
     display: flex;
     flex-direction: column;
+    padding: 5vh 10vw;
+    gap: 1.5rem;
+}
+
+.heroIzq{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    
+}
+p{
+    color: var(--color-complementario);
+}
+
+h1{
+    color: var(--color-principal);
+    font-size: 1.7rem;
+}
+
+.heroSubtitle{
+    font-size: 1.3rem
+}
+
+.colorPrincipal{
+    color: var(--color-principal);
+}
+.heroImg img{
+    width: 100%;
+    padding-left: 30px;
+}
+.hero .heroImg{
+    display: flex;
+    justify-content: center;
+
+}
+.heroBtn button{
+    background: var(--color-secundario);
+    color: var(--color-complementario);
+    width: 8rem;
+    padding: 10px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: var(--color-principal);
+    box-shadow: 0px 2.5px 2px rgba(255, 251, 251, 0.25);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;   
+}
+button:hover{
+    color: var(--color-principal);
+    background: var(--color-complementario);
+    border-color: var(--color-complementario);
+}
+.redes{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 
+/* Mediaquerys */
+
 @media screen and (min-width: 1000px){
+
+    html{
+        font-size: 18px;
+    }
     .menuControls{
         display: flex;
         gap: 50px;
-        font-size: 27px;
+        font-size: 1.2rem;
     }
     .menuControls a{
         text-decoration: none;
@@ -78,4 +143,23 @@ nav .btnDropdonw{
     .btnDropdonw{
         display: none;
     }
+    .hero{
+        align-items: flex-start;
+        flex-direction: row ;
+        justify-content: space-between;
+        }
+    .heroIzq{
+        width: 45%
+    }
+    .redes{
+        flex-direction: row;
+        gap: 0;
+        
+    }
+    .heroImg{
+        display: flex; 
+        flex-direction: row;
+        width: 55%;
+    }
+    
 }
